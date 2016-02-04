@@ -44,3 +44,13 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
+//changes name on contact
+$(".name").click(changeName);
+
+function changeName(event){
+	console.log("hi");
+	event.preventDefault();
+	var newName = anagrammedName($(this).text());
+	$(this).text(newName)
+}
